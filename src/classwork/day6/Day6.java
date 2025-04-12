@@ -13,7 +13,7 @@ public class Day6 {
             if (incoming.contains("got")) {
                 return;
             }
-            System.out.printf("Just got '%s' text!\n", incoming);
+            System.out.printf("Just got '%s' text!", incoming);
         }
     }
 }
