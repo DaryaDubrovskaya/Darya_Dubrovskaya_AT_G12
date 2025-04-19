@@ -1,5 +1,7 @@
 package homework.day1.cycletask;
 
+//import java.util.Arrays;
+
 import java.util.Random;
 
 public class Array {
@@ -55,6 +57,15 @@ public class Array {
 //        }
 //        System.out.println(Arrays.toString(array));
 
-    }
+        for (int i = 1; i < array.length; i++) {
+            int x = array[i];
+            int y = array[i + 1];
+            if (x < y) {
+                array[i] = y;
+                array[i + 1] = x;
+            }
+            System.out.print(array[i] + " ");
+        }
 
+    }
 }
