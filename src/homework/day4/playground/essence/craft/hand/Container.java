@@ -6,8 +6,8 @@ public abstract class Container extends Matter {
 
     protected String name;
 
-    public Container(int weight, int mass, String name) {
-        super(weight, mass);
+    public Container(int mass, String name) {
+        super(mass);
         this.name = name;
     }
 

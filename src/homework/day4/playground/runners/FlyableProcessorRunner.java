@@ -32,10 +32,24 @@ public class FlyableProcessorRunner {
         Fly aFly = new Fly(23, "Domestica Fly");
         Mosquito aMosquito = new Mosquito(12, "Vulgaris Mosquito");
 
-        flyableProcessor.runFlyable(flyableCopter); //не знаю насколько это правильно
+        flyableProcessor.runFlyable(flyableCopter);
+        flyableProcessor.runFlyable(flyablePlane);
+        flyableProcessor.runFlyable(flyableRocket);
+        flyableProcessor.runFlyable(flyableFly);
+        flyableProcessor.runFlyable(flyableMosquito);
+        flyableProcessor.runFlyable(aircraftCopter);
+        flyableProcessor.runFlyable(aircraftPlane);
+        flyableProcessor.runFlyable(aircraftRocket);
+        //flyableProcessor.runFlyable(insectFly);
+        //flyableProcessor.runFlyable(insectMosquito);
+        flyableProcessor.runFlyable(aCopter);
+        flyableProcessor.runFlyable(aPlane);
+        flyableProcessor.runFlyable(aRocket);
+        flyableProcessor.runFlyable(aFly);
+        flyableProcessor.runFlyable(aMosquito);
 
-        flyableProcessor.runFlyable(flyablePlane, "никуда"); //не знаю насколько это правильно
+        flyableProcessor.runFlyable(flyableCopter, "никуда");
 
-        flyableProcessor.runFlyable(flyableRocket, "повсюду"); //не знаю насколько это правильно
+        flyableProcessor.runFlyable(flyableCopter, "повсюду");
     }
 }

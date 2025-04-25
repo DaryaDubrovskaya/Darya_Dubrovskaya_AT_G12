@@ -5,17 +5,16 @@ import homework.day4.playground.essence.Matter;
 import homework.day4.playground.essence.craft.Transportable;
 
 public abstract class Aircraft extends Matter implements Flyable, Transportable {
-
     protected String name;
 
-    public Aircraft(int weight, int mass, String name) {
-        super(weight, mass);
+    public Aircraft(int mass, String name) {
+        super(mass);
         this.name = name;
     }
 
-    public Aircraft() {
-        super();
-    }
+//    public Aircraft() {
+//        super();
+//    }
 
     public String getName() {
         return name;
@@ -25,7 +24,14 @@ public abstract class Aircraft extends Matter implements Flyable, Transportable 
         this.name = name;
     }
 
+    @Override
     public void fly(String direction) {
-        System.out.printf("I am %s, my name is %s and I amd flying to %s", this.getClass(), this.name, direction); // тут что-то не то !? this.getClass().getSimpleName() ??
+        System.out.printf("I am %s, my name is %s and I amd flying to %s", this.getClass().getSimpleName(), this.name, direction);
+    }
+
+    @Override
+    public int move(int pointA, int pointB) {
+        System.out.printf("I am %s, my name is %s and I am moving from point %d to point %d", this.getClass().getSimpleName(), this.name, pointA, pointB);
+        return (pointB - pointA);
     }
 }

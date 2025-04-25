@@ -3,17 +3,16 @@ package homework.day4.playground.essence.creatures;
 import homework.day4.playground.essence.Matter;
 
 public abstract class Animal extends Matter {
-
     protected String name;
 
-    public Animal(int weight, int mass, String name) {
-        super(weight, mass);
+    public Animal(int mass, String name) {
+        super(mass);
         this.name = name;
     }
 
-    public Animal() {
-        super();
-    }
+//    public Animal() {
+//        super();
+//    }
 
     public String getName() {
         return name;
