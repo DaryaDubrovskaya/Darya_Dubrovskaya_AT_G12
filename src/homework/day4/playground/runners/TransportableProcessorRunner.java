@@ -69,7 +69,7 @@ public class TransportableProcessorRunner {
         transportableProcessor.runTransportable(aMoped);
         transportableProcessor.runTransportable(aMotorbike);
 
-        transportableProcessor.runTransportable(transportableCopter, 12, 15);
-        transportableProcessor.runTransportable(transportableCopter, 10, 5);
+        transportableProcessor.runTransportable(transportableCopter, 23, 242);
+        transportableProcessor.runTransportable(transportableCopter, 93, 7);
     }
 }
