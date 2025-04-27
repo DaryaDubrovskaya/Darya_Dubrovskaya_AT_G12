@@ -8,8 +8,8 @@ public class Mosquito extends Insect implements Flyable {
         super(mass, name);
     }
 
-    public Mosquito(String vulgarisMosquito) {
-    }
+//    public Mosquito(String vulgarisMosquito) {
+//    }
 
     @Override
     public void fly(String direction) {

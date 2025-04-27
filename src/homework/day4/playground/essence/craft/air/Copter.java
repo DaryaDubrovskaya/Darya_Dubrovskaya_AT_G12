@@ -6,9 +6,9 @@ public class Copter extends Aircraft {
         super(mass, name);
     }
 
-    public Copter(String mi8Copter) {
-        super();
-    }
+//    public Copter(String mi8Copter) {
+//        super();
+//    }
 
 //    public Copter(int weight, String mi8Flyable) {
 //        super();

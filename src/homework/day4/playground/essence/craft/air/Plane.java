@@ -6,6 +6,6 @@ public class Plane extends Aircraft {
         super(mass, name);
     }
 
-    public Plane(String s) {
-    }
+//    public Plane(String s) {
+//    }
 }
