@@ -10,6 +10,9 @@ public class Day6 {
 
         while (scanner.hasNext()) {
             String incoming = scanner.nextLine();
+//            if (incoming.equals("got")) {
+//                return;
+//            }
             if (incoming.contains("got")) {
                 return;
             }
