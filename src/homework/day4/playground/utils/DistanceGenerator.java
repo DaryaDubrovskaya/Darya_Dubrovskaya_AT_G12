@@ -8,7 +8,7 @@ public class DistanceGenerator {
 
         Random random = new Random();
 
-        int a = random.nextInt(39) + 1;
+        int a = random.nextInt(1, 40);
 
         System.out.printf("DistanceGenerator: I have generated distance with value: %d", a);
 

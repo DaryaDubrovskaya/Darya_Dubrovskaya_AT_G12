@@ -10,6 +10,6 @@ public class RideableProcessor {
     }
 
     public void runRideable(Rideable rideable, String direction) {
-        rideable.drive("куда-то там");
+        rideable.drive(direction);
     }
 }

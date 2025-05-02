@@ -10,10 +10,6 @@ public abstract class Animal extends Matter {
         this.name = name;
     }
 
-//    public Animal() {
-//        super();
-//    }
-
     public String getName() {
         return name;
     }

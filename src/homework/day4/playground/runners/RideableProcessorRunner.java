@@ -10,7 +10,7 @@ import homework.day4.playground.processors.RideableProcessor;
 public class RideableProcessorRunner {
 
     public static void main(String[] args) {
-        RideableProcessor rideableProcessor = new RideableProcessor ();
+        RideableProcessor rideableProcessor = new RideableProcessor();
 
         Rideable rideableCar = new Car(223, "Lada Rideable");
         Rideable rideableMoped = new Moped(3452, "Honda EM1 837 Rideable");
@@ -21,9 +21,11 @@ public class RideableProcessorRunner {
         Car aCar = new Car(223, "Lada Car");
         Moped aMoped = new Moped(3452, "Honda EM1 837 Moped");
         Motorbike aMotorbike = new Motorbike(7623, "Suzuki GSX-R1000 Motorbike");
-        Vehicle anonymousVehicle = new Vehicle(3452, "Honda EM1 837 Vehicle"){};
-        Rideable anonymousRideable = new Rideable(){
+        Vehicle anonymousVehicle = new Vehicle(3452, "Honda EM1 837 Vehicle") {
+        };
+        Rideable anonymousRideable = new Rideable() {
             String name = "Anonymous";
+
             @Override
             public void drive(String direction) {
                 System.out.printf("I am %s, my name is %s and I amd drive to %s%n",

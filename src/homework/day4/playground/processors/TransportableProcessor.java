@@ -5,7 +5,7 @@ import homework.day4.playground.utils.CoordinatesGenerator;
 
 public class TransportableProcessor {
 
-    public void runTransportable(Transportable transportable, int pointA, int pointB)  {
+    public void runTransportable(Transportable transportable, int pointA, int pointB) {
 
         int d = transportable.move(5, 8);
         System.out.printf("Transportable %s was moved to %d points", this.getClass().getSimpleName(), d);

@@ -7,7 +7,7 @@ public class DirectionGenerator {
     public static String generateDirection() {
         Random random = new Random();
 
-        int a = random.nextInt(39) + 1;
+        int a = random.nextInt(1, 40);
 
         if (a >= 1 && a <= 9) {
             return "NORTH";
@@ -18,7 +18,7 @@ public class DirectionGenerator {
         } else if (a >= 30 && a <= 39) {
             return "EAST";
         } else {
-            return "MISTAKE";
+            return " ";
         }
     }
 }

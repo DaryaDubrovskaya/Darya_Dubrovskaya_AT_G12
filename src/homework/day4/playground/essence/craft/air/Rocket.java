@@ -5,7 +5,4 @@ public class Rocket extends Aircraft {
     public Rocket(int mass, String name) {
         super(mass, name);
     }
-
-//    public Rocket(String superHeavyRocket) {
-//    }
 }

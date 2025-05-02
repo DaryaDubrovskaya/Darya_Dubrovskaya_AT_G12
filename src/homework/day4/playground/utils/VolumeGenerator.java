@@ -12,10 +12,10 @@ public class VolumeGenerator {
         int a = 0;
 
         if (pourable.getClass().getSimpleName().equals("Diesel") || pourable.getClass().getSimpleName().equals("Petrol")) {
-            a = random.nextInt(50) + 1;
+            a = random.nextInt(1, 50);
         }
         if (pourable.getClass().getSimpleName().equals("Water")) {
-            a = random.nextInt(100) + 1;
+            a = random.nextInt(50, 100);
         }
 
         System.out.printf("VolumeGenerator: I have generated volume of %s with value: %d", pourable.getClass().getSimpleName(), a);

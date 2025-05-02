@@ -15,6 +15,7 @@ public class CrawlableProcessorRunner {
         Beetle aBeetle = new Beetle(43, "Christmas Beetle");
         Crawlable anonymousCrawlable = new Crawlable() {
             String name = "Anonymous";
+
             @Override
             public void crawl(String direction, int distance) {
                 System.out.printf("I am %s, my name is %s and I am crawling to %s for %d units%n",
