@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class Runner2 {
+public class PersonRunner {
 
     public static void main(String[] args) {
 
