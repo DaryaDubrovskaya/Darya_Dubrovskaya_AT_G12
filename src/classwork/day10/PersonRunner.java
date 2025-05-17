@@ -41,7 +41,6 @@ public class PersonRunner {
             }
         }).toList());
 
-
         System.out.println(people.stream().min(Comparator.comparingInt(p -> p.age)).get());
         System.out.println(people.stream().sorted((p1, p2) -> p1.age - p2.age).findFirst().get());
     }
