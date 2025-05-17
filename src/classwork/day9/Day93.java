@@ -13,7 +13,7 @@ public class Day93 {
         Map<Integer, String> myMap = new HashMap<>();
 
         for (int i = 0; i < array.length; i++) {
-            myMap.put(i, array[i]);
+            myMap.put(i, array[i]); //заполнение HashMap
         }
 
         Set<Integer> keys = myMap.keySet();

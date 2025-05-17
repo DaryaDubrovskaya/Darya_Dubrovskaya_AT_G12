@@ -11,24 +11,24 @@ public class Day92 {
 
         Set<String> mySet = new HashSet<>();
 
-        String[] words = "мама мыла раму мыла".split(" ");
+        String[] words = "мама мыла раму мыла".split(" "); //деление строки на слова
 
 //        for (int i = 0; i < words.length; i++) {
 //            mySet.add(words[i]);
 //        }
 
         for (String i : words) {
-            mySet.add(i);
+            mySet.add(i); //заполнение списка mySet значениями String из массива words
         }
 
-        for (String word : mySet) {
+        for (String word : mySet) { //итерирование списка
             System.out.println(word);
         }
 
         System.out.println();
 
-        Iterator<String> iterator = Arrays.stream(words).iterator();
-        while (iterator.hasNext()) {
+        Iterator<String> iterator = mySet.iterator();
+        while (iterator.hasNext()) { //итерирование списка
             System.out.println(iterator.next());
         }
     }
