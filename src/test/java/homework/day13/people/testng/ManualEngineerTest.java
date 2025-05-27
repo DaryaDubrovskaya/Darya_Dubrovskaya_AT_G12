@@ -1,29 +1,29 @@
-package homework.day13.peple.testng;
+package homework.day13.people.testng;
 
-import homework.day13.people.AutomatedEngineer;
+import homework.day13.people.ManualEngineer;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
-public class AutomatedEngineerTest {
+public class ManualEngineerTest {
 
-    AutomatedEngineer engineer = new AutomatedEngineer(30, 5);
+    ManualEngineer engineer = new ManualEngineer(35, 6);
 
     @Test
     public void skillAutomatedEngineerTest() {
-        assertEquals(engineer.getSkill(), 15);
+        assertEquals(engineer.getSkill(), 12);
     }
 
     @Test
     public void experienceAutomatedEngineerTest() {
-        assertEquals(engineer.getExperience(), 5);
+        assertEquals(engineer.getExperience(), 6);
     }
 
     @Test
     public void ageAutomatedEngineerTest() {
-        assertEquals(engineer.getAge(), 30);
+        assertEquals(engineer.getAge(), 35);
     }
 
-    AutomatedEngineer engineer1 = new AutomatedEngineer(30, 5);
+    ManualEngineer engineer1 = new ManualEngineer(35, 6);
 
     @Test
     public void setSkillAutomatedEngineerTest() {
@@ -33,8 +33,8 @@ public class AutomatedEngineerTest {
 
     @Test
     public void setExperienceAutomatedEngineerTest() {
-        engineer1.setExperience(6);
-        assertEquals(engineer1.getExperience(), 6);
+        engineer1.setExperience(9);
+        assertEquals(engineer1.getExperience(), 9);
     }
 
     @Test

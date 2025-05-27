@@ -1,26 +1,26 @@
-package homework.day13.peple.junit;
+package homework.day13.people.junit;
 
-import homework.day13.people.ManualEngineer;
+import homework.day13.people.AutomatedEngineer;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class ManualEngineerTest {
+public class AutomatedEngineerTest {
 
-    ManualEngineer engineer = new ManualEngineer(35, 6);
+    AutomatedEngineer engineer = new AutomatedEngineer(30, 5);
 
     @Test
     public void skillAutomatedEngineerTest() {
-        assertEquals(12, engineer.getSkill());
+        assertEquals(15, engineer.getSkill());
     }
 
     @Test
     public void experienceAutomatedEngineerTest() {
-        assertEquals(6, engineer.getExperience());
+        assertEquals(5, engineer.getExperience());
     }
 
     @Test
     public void ageAutomatedEngineerTest() {
-        assertEquals(35, engineer.getAge());
+        assertEquals(30, engineer.getAge());
     }
 
     @Test
@@ -31,8 +31,8 @@ public class ManualEngineerTest {
 
     @Test
     public void setExperienceAutomatedEngineerTest() {
-        engineer.setExperience(9);
-        assertEquals(9, engineer.getExperience());
+        engineer.setExperience(6);
+        assertEquals(6, engineer.getExperience());
     }
 
     @Test
