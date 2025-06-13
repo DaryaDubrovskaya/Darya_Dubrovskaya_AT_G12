@@ -6,5 +6,4 @@ public class ManualEngineer extends Engineer {
 
         super(age, experience * 2, experience);
     }
-
 }

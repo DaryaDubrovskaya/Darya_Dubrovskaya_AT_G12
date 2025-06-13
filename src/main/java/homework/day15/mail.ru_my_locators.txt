@@ -1,0 +1,73 @@
+https://mail.ru/
+
+лого
+xpath:
+//img[@class="ph-logo__img svelte-qsd904"]
+css:
+[class="ph-logo__img svelte-qsd904"]
+
+Облако
+xpath:
+//a[contains(@href, "cloud.mail.ru")]
+css:
+[href*="cloud.mail.ru"]
+
+Регистрация
+xpath:
+//a[@class="ph-project ph-project__register svelte-ttryjx"]
+css:
+[class="ph-project ph-project__register svelte-ttryjx"]
+
+Войти
+xpath:
+//button[@class="ph-login svelte-ttryjx"]
+css:
+[class="ph-login svelte-ttryjx"]
+
+Поиск
+xpath:
+//input[@class="arrow__input mini-suggest__input"]
+css:
+[class="arrow__input mini-suggest__input"]
+
+Найти
+xpath:
+//button[@class="search-arrow__button edd-ddac__cs3gds"]
+css:
+[class="search-arrow__button edd-ddac__cs3gds"]
+
+Леди
+xpath:
+//a[contains(@href, "lady.mail.ru")]
+css:
+[href*="lady.mail.ru"]
+
+Вторая ссылка
+xpath:
+//ul[@class="tabs-content edd-ddac__11a7yic tabs-content_small-margin"]/li[2]
+css:
+[class="tabs-content edd-ddac__11a7yic tabs-content_small-margin"] li:nth-child(2)
+
+Войти (слева)
+xpath:
+//button[@class="resplash-btn resplash-btn_primary edd-ddac__1ebh38x"]
+css:
+[class="resplash-btn resplash-btn_primary edd-ddac__1ebh38x"]
+
+Создать почту(слева)
+xpath:
+//a[text()='Создать почту']
+css:
+[class="resplash-btn resplash-btn_outlined-themed edd-ddac__1ebh38x"]
+
+Подробнее
+xpath:
+//div[@class="aXBDPvc"]
+css:
+[class="aXBDPvc"]
+
+Погода
+xpath:
+//a[@class="weather__current edd-ddac__gzml55"]
+css:
+[class="weather__current edd-ddac__gzml55"]

@@ -6,5 +6,4 @@ public class AutomatedEngineer extends Engineer {
 
         super(age, experience * 3, experience);
     }
-
 }

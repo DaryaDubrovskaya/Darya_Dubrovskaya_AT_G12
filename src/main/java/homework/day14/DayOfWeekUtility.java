@@ -39,4 +39,3 @@ public class DayOfWeekUtility {
         return "Invalid day number. Please provide a number between 1 and 7.";
     }
 }
-
