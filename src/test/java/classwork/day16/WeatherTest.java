@@ -15,32 +15,29 @@ public class WeatherTest {
 
     public static void main(String[] args) throws InterruptedException {
 
+        //флажок против капчи
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-blink-features=AutomationControlled");
 
         WebDriver driver = new ChromeDriver(options);
 
-       //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-        LocalDate tomorrow = LocalDate.now().plusDays(1);
-        String tomorrowDate = tomorrow.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        String tomorrowDay = tomorrow.getDayOfWeek().getDisplayName(TextStyle.FULL, new Locale("ru"));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         driver.get("https://www.google.com/");
-
         driver.findElement(By.name("q")).sendKeys("погода минск");
+
         Thread.sleep(500);
         driver.findElement(By.xpath("//ul[@role='listbox']/li[1]")).click();
 
-        Thread.sleep(1000);
+        //driver.findElement(By.xpath("//*[@aria-label='18°Celsius среда 12:00']"));
+
+        LocalDate tomorrow = LocalDate.now().plusDays(1);
+        String tomorrowDay = tomorrow.getDayOfWeek().getDisplayName(TextStyle.FULL, new Locale("ru"));
+
         String weatherData = driver
                 .findElement(By.xpath("//*[contains(@aria-label,'Celsius " + tomorrowDay + " 12:00')]"))
                 .getAttribute("aria-label");
-        String temperature = weatherData.split("°")[0];
-        System.out.println("Завтра " + tomorrowDate + " " + tomorrowDay + " - температура в 12:00 будет " + temperature + "°C");
-        driver.quit();
-
-        //driver.findElement(By.xpath("//*[@aria-label='18°Celsius среда 12:00']"));
-
+        System.out.println(weatherData);
+        //driver.quit();
     }
 }
