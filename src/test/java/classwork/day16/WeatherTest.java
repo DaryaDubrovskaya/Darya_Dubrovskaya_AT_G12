@@ -20,6 +20,7 @@ public class WeatherTest {
 
         WebDriver driver = new ChromeDriver(options);
 
+        //неявное ожидание
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         driver.get("https://www.google.com/");
