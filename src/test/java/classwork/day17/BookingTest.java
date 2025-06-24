@@ -8,9 +8,16 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import org.junit.Test;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static org.junit.Assert.assertEquals;
+
 public class BookingTest {
 
-   public static void main(String[] args) {
+    @Test
+    public static void main(String[] args) {
 
 //       1. Перейти на сайт booking.com
 //       2. Найти отели для города «Париж», с проживанием на 7 ночей заездом через 3 дня, для 4 взрослых в 2 номерах
@@ -22,7 +29,7 @@ public class BookingTest {
 
         driver.get("https://booking.com");
 
-       driver.findElement(By.xpath("//button[@aria-label='Скрыть меню входа в аккаунт.']")).click();
+        driver.findElement(By.xpath("//button[@aria-label='Скрыть меню входа в аккаунт.']")).click();
 
         driver.findElement(By.name("ss")).sendKeys("Париж");
         driver.findElement(By.xpath("//button[@data-testid='searchbox-dates-container']")).click();
@@ -40,10 +47,22 @@ public class BookingTest {
         driver.findElement(By.xpath("//label[@for='group_adults']/../following-sibling::div/button[2]")).click();
         driver.findElement(By.xpath("//label[@for='group_adults']/../following-sibling::div/button[2]")).click();
 
-       driver.findElement(By.xpath("//label[@for='no_rooms']/../following-sibling::div/button[2]")).click();
+        driver.findElement(By.xpath("//label[@for='no_rooms']/../following-sibling::div/button[2]")).click();
 
-       driver.findElement(By.xpath("//button[@type='submit']")).click();
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
 
+        driver.findElement(By.xpath("//div[(text()='Найдите качественные отели и жилье для отдыха.')]/../following-sibling::div/div[@data-filters-item='class:class=5']")).click();
 
+        driver.findElement(By.xpath("//button[@data-testid='sorters-dropdown-trigger']")).click();
+        driver.findElement(By.xpath("//button[@aria-label='Оценка объекта (по возрастанию)']")).click();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+
+        String rate = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions
+                        .visibilityOfElementLocated(By.xpath("//div[@data-testid='property-card'][1]//div[@data-testid='rating-stars']//..")))
+                .getAttribute("aria-label");
+
+        assertEquals("Ожидаемый рейтинг отелей не соответствует", "5 из 5", rate);
     }
 }
